@@ -289,9 +289,20 @@ Temperaturkoefficienten kan vara positiv (PTC) eller negativ (NTC).
 I principscheman har PTC- respektive NTC-resistorer symboler som i bild \ref{fig:BildII2-1}.
 
 \begin{figure}
-\includegraphics[width=\textwidth]{images/cropped_pdfs/bild_2_2-01.pdf}
-\caption{Schemasymboler för resistorer}
-\label{fig:BildII2-1}
+    \begin{circuitikz}[european]
+        \foreach \x [count=\xi] in {R,pR,vR,varistor,phR,thR,thRp,thRn} {
+            \draw ($1.5*(\xi,0)$) to[\x,label=\xi] ++(0,2);
+        }
+    \end{circuitikz}
+    \begin{tabular}{ll}
+      1 Allmän symbol                       & 5 Fotoresistor \\
+      2 Ställbar resistor, potentiometer    & 6 Termistor \\
+      3 Variabel resistor                   & 7 Temperaturberoende resistor, PTC\\
+      4 Varistor                            & 8 Temperaturberoende resistor, NTC\\
+    \end{tabular}
+
+    \caption{Schemasymboler för resistorer}
+    \label{fig:BildII2-1}
 \end{figure}
 
 \subsection{Variabla resistorer}
