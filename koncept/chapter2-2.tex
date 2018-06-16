@@ -231,9 +231,18 @@ Dielektrikum består då oftast av luft, men kan även bestå av ett fast materi
 \subsubsection{Fasta kondensatorer}
 
 \begin{figure}[ht]
-\includegraphics[width=\textwidth]{images/cropped_pdfs/bild_2_2-02.pdf}
-\caption{Schemasymboler för kondensatorer}
-\label{fig:BildII2-2}
+    %\includegraphics[width=\textwidth]{images/cropped_pdfs/bild_2_2-02.pdf}
+    \begin{circuitikz}[european]
+        \foreach \x [count=\xi] in {C,pC,eC,vC} {
+            \draw ($1.4*(\xi,0)$) to[\x,label=\xi] ++(0,-2);
+        }
+        \node [anchor=north west] at (7,0) {1 Allmän symbol};
+        \node [anchor=north west] at (7,-0.5) {2 Polariserad kondensator};
+        \node [anchor=north west] at (7,-1) {3 Elektrolytkondensator};
+        \node [anchor=north west] at (7,-1.5) {4 Variabel kondensator};
+    \end{circuitikz}
+    \caption{Schemasymboler för kondensatorer}
+    \label{fig:BildII2-2}
 \end{figure}
 
 Bild \ref{fig:BildII2-2}
